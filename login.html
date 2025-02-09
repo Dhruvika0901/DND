@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prismatic Login Form</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <ul class="nav">
+        <li onclick="showLogin()">Login</li>
+        <li onclick="showSignup()">Sign up</li>
+        <li onclick="showForgotPassword()">Forgot password</li>
+        <li onclick="showContactUs()">Contact us</li>
+    </ul>
+    
+    <div class="wrapper">
+        <div class="rec-prism">
+            <div class="face face-front">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <button type="button" onclick="showThankYou()">Login</button>
+                </form>
+            </div>
+            <div class="face face-right">
+                <h2>Sign Up</h2>
+                <form>
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="button" onclick="showThankYou()">Register</button>
+                </form>
+            </div>
+            <div class="face face-back">
+                <h2>Forgot Password</h2>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="button" onclick="showThankYou()">Reset</button>
+                </form>
+            </div>
+            <div class="face face-left">
+                <h2>Contact Us</h2>
+                <form>
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="button" onclick="showThankYou()">Send</button>
+                </form>
+            </div>
+            <div class="face face-bottom">
+                <h2>Thank You!</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
