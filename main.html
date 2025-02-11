@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App with Switch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            transition: background 0.3s, color 0.3s;
+            margin: 0;
+            color: #3ea3b5;
+        }
+        h1{
+            color: #3ea3b5;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            border: #3ea3b5;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #3ea3b5;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .item-list {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+        .item-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #3ea3b5;
+            border-radius: 5px;
+            margin: 5px;
+            width: 300px;
+        }
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 >App with Switch Button</h1>
+        <div class="toggle-container">
+            <p>Select All</p>
+            <label class="switch">
+                <input type="checkbox" id="selectAllToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <ul class="item-list">
+            <li>Loans<label class="switch"><input type="checkbox" class="itemCheckbox"><span class="slider"></span></label></li>
+            <li>Credit Cards<label class="switch"><input type="checkbox" class="itemCheckbox"><span class="slider"></span></label></li>
+            <li>Debt Relief Services<label class="switch"><input type="checkbox" class="itemCheckbox"><span class="slider"></span></label></li>
+            <li>Insurance Policies<label class="switch"><input type="checkbox" class="itemCheckbox"><span class="slider"></span></label></li>
+            <li>Investment Opportunities<label class="switch"><input type="checkbox" class="itemCheckbox"><span class="slider"></span></label></li>
+            <li>Educational Programs<label class="switch"><input type="checkbox" class="itemCheckbox"><span class="slider"></span></label></li>
+            <li>Product Promotions<label class="switch"><input type="checkbox" class="itemCheckbox"><span class="slider"></span></label></li>
+            <li>Real Estate Promotion<label class="switch"><input type="checkbox" class="itemCheckbox"><span class="slider"></span></label></li>
+
+        </ul>
+    </div>
+    <script>
+        const selectAllToggle = document.getElementById('selectAllToggle');
+        const checkboxes = document.querySelectorAll('.itemCheckbox');
+        
+        selectAllToggle.addEventListener('change', () => {
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = selectAllToggle.checked;
+            });
+        });
+    </script>
+</body>
+</html>

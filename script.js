@@ -16,6 +16,4 @@ function showContactUs() {
     prism.style.transform = "translateZ(-125px) rotateY(90deg)";
 }
 
-function showThankYou() {
-    prism.style.transform = "translateZ(-125px) rotateX(-90deg)";
-}
+

@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #79cbd8;
+    background: #fdfefe;
     text-align: center;
     padding: 50px;
 }
@@ -26,7 +26,7 @@ body {
 }
 
 .nav li:hover {
-    color: #07ad90;
+    color: #3ea3b5;
 }
 
 .wrapper {
@@ -50,7 +50,7 @@ body {
     width: 250px;
     height: 350px;
     background: #fff;
-    border: 2px solid #07ad90;
+    border: 2px solid #3ea3b5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,14 +68,14 @@ body {
 
 h2 {
     margin-bottom: 15px;
-    color: #07ad90;
+    color: #3ea3b5;
 }
 
 input, textarea, button {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #07ad90;
+    border: 1px solid #3ea3b5;
     border-radius: 5px;
     font-size: 16px;
 }
@@ -86,7 +86,7 @@ textarea {
 }
 
 button {
-    background: #07ad90;
+    background: #3ea3b5;
     color: #fff;
     cursor: pointer;
     border: none;
@@ -96,4 +96,21 @@ button {
 
 button:hover {
     opacity: 0.8;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #3ea3b5;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+a.button:hover {
+    background-color: #3ea3b5;
 }
